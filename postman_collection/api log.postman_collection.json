@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "8812ca1a-af0a-47aa-9946-ee37f054c692",
+		"name": "api log",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get log by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "mundo"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/logger-service/logger/log/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"logger-service",
+						"logger",
+						"log",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get log by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "mundo"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/logger-service/logger/log/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"logger-service",
+								"logger",
+								"log",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-mxg7LoPQwYauLWKq7ZvHTFtVdfE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 28 Jan 2021 02:51:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"rawData\": \"prueba\",\n    \"action\": \"accion 1\",\n    \"user\": \"usuario 1\",\n    \"createdAt\": \"2021-01-28T05:33:25.582Z\",\n    \"updatedAt\": \"2021-01-28T05:33:25.582Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get by user and params (optionals)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/logger-service/logger/find/:user?skip=0&take=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"logger-service",
+						"logger",
+						"find",
+						":user"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "2"
+						}
+					],
+					"variable": [
+						{
+							"key": "user",
+							"value": "usuario1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get by user and params (optionals)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/logger-service/logger/find/:user?take=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"logger-service",
+								"logger",
+								"find",
+								":user"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "take",
+									"value": "2"
+								}
+							],
+							"variable": [
+								{
+									"key": "user",
+									"value": "usuario1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "314"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13a-KaUVhuzs+j8gk8eoFJjrxEtMsUs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 28 Jan 2021 03:15:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": [\n        {\n            \"id\": 9,\n            \"rawData\": \"prueba 5\",\n            \"action\": \"accion 5\",\n            \"user\": \"usuario1\",\n            \"createdAt\": \"2021-01-28T06:11:39.626Z\",\n            \"updatedAt\": \"2021-01-28T06:11:39.626Z\"\n        },\n        {\n            \"id\": 5,\n            \"rawData\": \"prueba 4\",\n            \"action\": \"accion 4\",\n            \"user\": \"usuario1\",\n            \"createdAt\": \"2021-01-28T06:11:17.103Z\",\n            \"updatedAt\": \"2021-01-28T06:11:17.103Z\"\n        }\n    ],\n    \"count\": 5\n}"
+				}
+			]
+		}
+	]
+}
